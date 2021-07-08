@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
-	public function Index()
+	public function index()
 	{
 		$product = Product::get();
 
@@ -32,15 +32,14 @@ class ProductController extends Controller
 
 		return view('admin.product.edit', [
 			'product' => $Product,
-			'new_product' => $new_product,	
+			'new_product' => $new_product,
 		]);
 	}
 
 	public function update(Request $request, Product $Product)
 	{
 		$Product->update($request->all());
-		$son->save();
-		
+
 		return response()->json([
 			'product' => $Product,
 			'saved' => true,

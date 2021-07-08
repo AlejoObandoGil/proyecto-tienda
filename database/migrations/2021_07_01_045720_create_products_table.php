@@ -20,8 +20,9 @@ class CreateProductsTable extends Migration
             $table->string('stock');
             $table->mediumText('details');
             $table->text('description');
-            $table->bigInteger('price');
-            $table->bigInteger('shipping_cost');
+            $table->decimal('price', 9, 2);
+            $table->decimal('shipping_cost', 9, 2);
+            $table->string('image_path');
             $table->timestamps();
         });
     }

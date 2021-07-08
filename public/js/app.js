@@ -2070,6 +2070,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['all_product'],
   methods: {
@@ -38793,6 +38794,10 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card-body" }, [
+    _c("h1", { staticClass: "mt-8 text-center title" }, [
+      _vm._v("Products in Stock")
+    ]),
+    _vm._v(" "),
     _c(
       "table",
       {
@@ -38872,7 +38877,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Price")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Shipping")]),
+        _c("th", [_vm._v("Shipping Cost")]),
         _vm._v(" "),
         _c("th", [_vm._v("Actions")])
       ])

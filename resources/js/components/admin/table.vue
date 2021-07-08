@@ -1,5 +1,6 @@
 <template>
     <div class="card-body">
+		<h1 class="mt-8 text-center title">Products in Stock</h1>
 		<table id="product-table" class="table table-bordered table-striped">
 			<thead>
 				<tr>
@@ -9,7 +10,7 @@
 					<th>Details</th>
 					<th>Description</th>
 					<th>Price</th>
-					<th>Shipping</th>
+					<th>Shipping Cost</th>
 					<th>Actions</th>
 				</tr>
 			</thead>
