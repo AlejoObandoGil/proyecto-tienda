@@ -17,8 +17,14 @@ class ProductController extends Controller
 
     public function create(Request $request)
 	{
+        $name='';
 		$product = new Product($request->all());
-		$product->save();
+        if ($request->hasFile('image_path')){
+            $name = $request->image_path->getClientOriginalName();
+            $product->image_path = $name;
+            $request->file('image_path')->storeAs('img', $name);
+        }
+        $product->save();
 
 		return response()->json([
 			'product' => $product,

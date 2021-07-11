@@ -1,7 +1,7 @@
 <template>
     <div class="card-body">
 		<h1 class="mt-8 text-center title">Products in Stock</h1>
-		<table id="product-table" class="table table-bordered table-striped">
+		<table class="table table-bordered table-striped" id="table">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -11,6 +11,7 @@
 					<th>Description</th>
 					<th>Price</th>
 					<th>Shipping Cost</th>
+                    <th>Image</th>
 					<th>Actions</th>
 				</tr>
 			</thead>
@@ -23,12 +24,13 @@
 					<td>{{ product.description }}</td>
 					<td>$ {{ product.price }}</td>
 					<td>$ {{ product.shipping_cost }}</td>
+                    <td>{{ product.image_path }}</td>
 					<td>
 						<a :href="`admin/edit/${product.id}`" class="btn btn-xs btn-info"><i class="fa fa-plus"></i></a>
 						<a href="#" class="btn btn-xs btn-danger" @click.prevent="deleteProduct(product, index)"><i class="fa fa-times"></i></a>
 					</td>
 				</tr>
-			</tbody>		
+			</tbody>
 
 		</table>
 	</div>
@@ -36,6 +38,9 @@
 <script>
 export default {
 	props: ['all_product'],
+    mounted(){
+        $('#table').DataTable();
+    },
 	methods:{
 		async deleteProduct(product, index){
 			await axios.delete(`admin/delete/${product.id}`).then(res => {

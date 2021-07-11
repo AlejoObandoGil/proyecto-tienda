@@ -9,6 +9,24 @@
                 <li><a href="{{ route('shop') }}"> <i class="fa fa-list"></i>Products</a></li>
             </ol>
         </nav>
+        {{-- <section>
+            <form action="{{ route('file.save') }}" class="form" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label> Titulo </label>
+                        <input type="text" class="form-control" name="titulo">
+                    </div>
+                    <div class="col-md-4">
+                        <label> Archivo </label>
+                        <input type="file" class="form-control" name="file">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </section> --}}
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="row">
@@ -25,24 +43,24 @@
                                     <div class="reference">
                                         <a href="">
                                             <span class="card-title">{{ $product->reference }}</span>
-                                        </a> 
+                                        </a>
                                     </div>
                                     <div class="post-category">
                                         <a href="">
                                             <span class="category text-capitalize">Categoria 1</span>
-                                        </a>    
+                                        </a>
                                     </div>
                                 </header>
                                 <div class="card" style="margin-bottom: -40px; height: auto;">
                                     <div class="row">
                                         <div class="col-lg-3">
-                                            <img src="/img/{{ $product->image_path }}"
+                                            <img src="/img/{{ $product->file }}"
                                             class="card-img-top mx-auto"
                                             style="height: 200px; width: 200px;display: block;"
-                                            alt="{{ $product->image_path }}"
+                                            alt="{{ $product->file }}"
                                             >
                                         </div>
-    
+
                                         <div class="col-lg-8">
                                             <a href=""><h5 class="card-title">{{ $product->name }}</h5></a>
                                             <h3>US $ {{ $product->price }}</h3>
@@ -57,7 +75,7 @@
                                                 <input type="hidden" value="{{ $product->description }}" id="description" name="description">
                                                 <input type="hidden" value="{{ $product->price }}" id="price" name="price">
                                                 <input type="hidden" value="{{ $product->shipping_cost }}" id="shipping_cost" name="shipping_cost">
-                                                <input type="hidden" value="{{ $product->image_path }}" id="img" name="img">
+                                                <input type="hidden" value="{{ $product->file }}" id="img" name="img">
                                                 {{-- <input type="hidden" value="{{ $product->slug }}" id="slug" name="slug"> --}}
                                                 <input type="hidden" value="1" id="quantity" name="quantity">
                                                 <div class="card-footer" style="background-color: white;">
@@ -74,7 +92,7 @@
                             </div>
                         </article>
                     @endforeach
-                </section>                
+                </section>
             </div>
         </div>
         <div class="pagination">

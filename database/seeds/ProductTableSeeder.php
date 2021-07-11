@@ -18,13 +18,13 @@ class ProductTableSeeder extends Seeder
         $product->name = "Pc Gamer Alto Rendimiento Ideal Diseño Vfx Y Animacion 3d";
         $product->reference = "intel1234";
         $product->stock = "5";
-        $product->details = "Marca: CoolerMaster MSI INTEL 
-        Modelo: PC GAMER DISEÑO 2021 16 NUCLEOS 
-        Procesador: Intel Core i7 10Ma Generacion! 12 NUCLEOS 
+        $product->details = "Marca: CoolerMaster MSI INTEL
+        Modelo: PC GAMER DISEÑO 2021 16 NUCLEOS
+        Procesador: Intel Core i7 10Ma Generacion! 12 NUCLEOS
         Disco duro: 4.5 TB
-        RAM: 32 GB 
+        RAM: 32 GB
         Sistema operativo: Windows 10";
-        $product->description = "TORRE + MONITOR + TECLADO/MOUSE + CONECTIVIDAD +FUNKO-POP 3 Ventiladores RGB EN CHASIS FRONTAL DETALLES TECNICOS *Procesador: Core i7 10Th Generación! 
+        $product->description = "TORRE + MONITOR + TECLADO/MOUSE + CONECTIVIDAD +FUNKO-POP 3 Ventiladores RGB EN CHASIS FRONTAL DETALLES TECNICOS *Procesador: Core i7 10Th Generación!
         ---- *REFRIGERACION LIQUIDA COOLER MASTER 360 ESPEJO RGB *Board: MSI Z490 TORPEDO *MEMORIA RAM: 32GB 3600MHZ *TARJETA DE VIDEO DEDICADA: RTX 3060TI 8GB DEDICADOS GDDR6 4 PUERTOS DE VIDEO, MULTIPLES PANTALLAS";
         $product->price = 4499.99;
         $product->shipping_cost = 0.99;
@@ -37,9 +37,9 @@ class ProductTableSeeder extends Seeder
         $product->stock = "7";
         $product->details = "Marca: ASUS TUF GAMIN
         Modelo: GTX 1650
-        Procesador: RYZEN 5 
-        Disco duro: 500 GB 
-        RAM: 16 GB 
+        Procesador: RYZEN 5
+        Disco duro: 500 GB
+        RAM: 16 GB
         Sistema operativo: Windows 10";
         $product->description = "- MEMORIA RAM: 16GB PC DDR4 3200MHZ RGB.
         - BOARD PLACA : MSI B450 GAMING PLUS
@@ -61,9 +61,9 @@ class ProductTableSeeder extends Seeder
         $product->stock = "10";
         $product->details = "Marca: AMD
         Modelo: RYZEN 5
-        Procesador: AMD RYZEN 5 3400G 
-        Disco duro: 1 TB 
-        RAM: 16 GB 
+        Procesador: AMD RYZEN 5 3400G
+        Disco duro: 1 TB
+        RAM: 16 GB
         Sistema operativo: Windows 10";
         $product->description = "- PROCESADOR AMD RYZEN 5 3400G RELOJ DE AUMENTO MAX: 4.2GHz
         N.º DE NUCLEOS DE CPU: 4 N.º DE SUBPROCESOS 8.
@@ -88,7 +88,7 @@ class ProductTableSeeder extends Seeder
         $product->reference = "clx1243";
         $product->stock = "2";
         $product->details = "Procesador Intel Core i97900X
-        RAM 32Gb 
+        RAM 32Gb
         tarjeta gráfica Nvidia GeForce GTX 1080 Ti
         SSD 480Gb HDD 3Tb";
         $product->description = "Experiencia impresionante escenas realistas con la NVIDIA GeForce RTX tarjeta gráfica de este CLX escritorio de juego bundle.. Windows 10 64bitVR ReadyNVIDIA GeForce RTX 2070 8GB dedicado graphicsTechnical detalles: 9 de Generación de los procesadores Intel Core i79700K de procesador memoria de 16 gb; 960GB; unidad de estado sólido duro de 3 tb drive";
@@ -96,7 +96,7 @@ class ProductTableSeeder extends Seeder
         $product->shipping_cost = 0.99;
         $product->image_path = "pc-gamer-3.png";
         $product->save();
-        
+
         $product = new Product();
         $product->name = "NextComputing EDGE XT2i Creative Pro Workstation";
         $product->reference = "asd1243";

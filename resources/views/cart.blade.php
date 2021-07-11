@@ -48,7 +48,7 @@
                 @foreach($cartCollection as $item)
                     <div class="row">
                         <div class="col-lg-4">
-                            <img src="/img/{{ $item->attributes->image }}" class="img-thumbnail" width="400" height="400">
+                            <img src="/img/{{ $item->attributes->file }}" class="img-thumbnail" width="400" height="400">
                         </div>
                         <div class="col-lg-8">
                             <p>
