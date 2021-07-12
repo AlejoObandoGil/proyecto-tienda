@@ -40,14 +40,14 @@
                         <article class="post no-image">
                             <div class="content-post">
                                 <header class="container-flex space-between">
-                                    <div class="reference">
+                                    {{-- <div class="reference">
                                         <a href="">
                                             <span class="card-title">{{ $product->reference }}</span>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                     <div class="post-category">
                                         <a href="">
-                                            <span class="category text-capitalize">Categoria 1</span>
+                                            <span class="category text-capitalize">{{ $product->reference }}</span>
                                         </a>
                                     </div>
                                 </header>
@@ -62,20 +62,15 @@
                                         </div>
 
                                         <div class="col-lg-8">
-                                            <a href=""><h5 class="card-title">{{ $product->name }}</h5></a>
+                                            <a href="/show/{{ $product->id }}"><h5 class="card-title">{{ $product->name }}</h5></a>
                                             <h3>US $ {{ $product->price }}</h3>
-                                            <p>Envio GRATIS</p>
+                                            <p>FREE shipping</p>
                                             <form action="{{ route('cart.store') }}" method="POST">
                                                 {{ csrf_field() }}
                                                 <input type="hidden" value="{{ $product->id }}" id="id" name="id">
                                                 <input type="hidden" value="{{ $product->name }}" id="name" name="name">
-                                                <input type="hidden" value="{{ $product->reference }}" id="reference" name="reference">
-                                                <input type="hidden" value="{{ $product->stock }}" id="stock" name="stock">
-                                                <input type="hidden" value="{{ $product->details }}" id="details" name="details">
-                                                <input type="hidden" value="{{ $product->description }}" id="description" name="description">
                                                 <input type="hidden" value="{{ $product->price }}" id="price" name="price">
-                                                <input type="hidden" value="{{ $product->shipping_cost }}" id="shipping_cost" name="shipping_cost">
-                                                <input type="hidden" value="{{ $product->file }}" id="img" name="img">
+                                                <input type="hidden" value="{{ $product->image_path }}" id="img" name="img">
                                                 {{-- <input type="hidden" value="{{ $product->slug }}" id="slug" name="slug"> --}}
                                                 <input type="hidden" value="1" id="quantity" name="quantity">
                                                 <div class="card-footer" style="background-color: white;">

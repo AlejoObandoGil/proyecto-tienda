@@ -8,6 +8,7 @@ Route::get('test/role/assign', 'Admin\RoleController@assign');
 
 // Views Cart
 Route::get('/', 'CartController@shop')->name('shop');
+Route::get('/show/{product}', 'CartController@show')->name('show');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/cart', 'CartController@cart')->name('cart.index');

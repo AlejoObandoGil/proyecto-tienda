@@ -48,12 +48,11 @@
                 @foreach($cartCollection as $item)
                     <div class="row">
                         <div class="col-lg-4">
-                            <img src="/img/{{ $item->attributes->file }}" class="img-thumbnail" width="400" height="400">
+                            <img src="/img/{{ $item->attributes->image }}" class="img-thumbnail" width="400" height="400">
                         </div>
                         <div class="col-lg-8">
                             <p>
                                 <b><a href="/shop/{{ $item->attributes->slug }}">{{ $item->name }}</a></b><br>
-                                <b>Reference: </b>{{ $item->reference }}<br>
                                 <b>Price: </b>US $ {{ $item->price }}<br>
                                 <b>Sub Total: </b>US $ {{ \Cart::get($item->id)->getPriceSum() }}<br>
                                 {{--                                <b>With Discount: </b>${{ \Cart::get($item->id)->getPriceSumWithConditions() }}--}}
@@ -81,12 +80,6 @@
                     </div>
                     <hr>
                 @endforeach
-                {{-- @if(count($cartCollection)>0)
-                    <form action="{{ route('cart.clear') }}" method="POST">
-                        {{ csrf_field() }}
-                        <button class="btn btn-secondary btn-md">Clear Cart</button>
-                    </form>
-                @endif --}}
             </div>
             @if(count($cartCollection)>0)
                 <div class="col-lg-5">

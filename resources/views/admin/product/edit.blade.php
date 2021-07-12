@@ -5,13 +5,13 @@
     <div>
         <br>
         <h1 class="m-0">{{ config('app.name')}}
-            <small>Admin / New Product</small>
+            <small>/ Admin / Edit Product</small>
         </h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 {{-- links de rutas --}}
                 <li><a href="{{ route('shop') }}"> <i class="fa fa-home"></i>Home</a></li>
-                <li><a href="{{ route('shop') }}"> <i class="fa fa-list"></i>Products</a></li>
+                <li><a href="{{ route('shop') }}"> <i class="fa fa-list"></i>Admin</a></li>
             </ol>
         </nav>
     </div>

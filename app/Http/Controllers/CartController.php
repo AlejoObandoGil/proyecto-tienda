@@ -10,14 +10,19 @@ class CartController extends Controller
     public function shop()
     {
         $products = Product::all();
-        
+
         return view('welcome')->with(['products' => $products]);
+    }
+
+    public function show(Product $product)
+    {
+        return view('show', compact('product'));
     }
 
     public function cart()
     {
         $cartCollection = \Cart::getContent();
-        
+
         return view('cart')->with(['cartCollection' => $cartCollection]);
     }
 
@@ -50,5 +55,5 @@ class CartController extends Controller
         ));
         return redirect()->route('cart.index')->with('success_msg', 'Cart is Updated!');
     }
-    
+
 }

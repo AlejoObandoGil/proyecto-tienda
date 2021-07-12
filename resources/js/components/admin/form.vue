@@ -1,43 +1,48 @@
 <template>
 	<form @submit.prevent="save()" method="POST" class="form" enctype="multipart/form-data">
-		<div class="form-group">
-			<label>Name</label>
-			<input type="text" class="form-control" v-model="product.name" required>
-		</div>
-		<div class="form-group">
-			<label>Reference</label>
-			<input type="text" class="form-control" v-model="product.reference" required>
-		</div>
-		<div class="form-group">
-			<label>Stock</label>
-			<input type="text" class="form-control" v-model="product.stock" required>
-		</div>
-		<div class="form-group">
-			<label>Details</label>
-			<textarea rows="5" type="text" class="form-control" v-model="product.details" required></textarea>
-		</div>
-		<div class="form-group">
-			<label>Description</label>
-			<textarea rows="10" type="text" class="form-control" v-model="product.description" required></textarea>
-		</div>
-		<div class="form-group">
-			<label>Price</label>
-			<input type="text" class="form-control" v-model="product.price" required>
-		</div>
-		<div class="form-group">
-			<label>Shipping cost</label>
-			<input type="text" class="form-control" v-model="product.shipping_cost" required>
-		</div>
-        <div class="form-group">
-            <label>Image file</label>
-            <input type="file" class="form-control" @change="previewFiles">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" v-model="product.name" required>
+                </div>
+                <div class="form-group">
+                    <label>Reference</label>
+                    <input type="text" class="form-control" v-model="product.reference" required>
+                </div>
+                <div class="form-group">
+                    <label>Stock</label>
+                    <input type="text" class="form-control" v-model="product.stock" required>
+                </div>
+                <div class="form-group">
+                    <label>Details</label>
+                    <textarea rows="5" type="text" class="form-control" v-model="product.details" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Image file</label>
+                    <input type="file" class="form-control" @change="previewFiles">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea rows="7" type="text" class="form-control" v-model="product.description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" v-model="product.price" required>
+                </div>
+                <div class="form-group">
+                    <label>Shipping cost</label>
+                    <input type="text" class="form-control" v-model="product.shipping_cost" required>
+                </div>
+                <div>
+                    <img :src="product.image_path" alt="" class="img-responsive imagen-form">
+                </div>
+            </div>
         </div>
-
-		<div class="text-center">
-			<button type="submit" class="btn btn-primary">Save</button>
-		</div>
-        <div>
-            <img :src="product.image_path" alt="" class="img-responsive imagen-form">
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
 	</form>
 </template>

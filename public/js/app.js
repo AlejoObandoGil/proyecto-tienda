@@ -1972,6 +1972,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['new_product'],
   data: function data() {
@@ -38687,206 +38692,212 @@ var render = function() {
       }
     },
     [
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.product.name,
-              expression: "product.name"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", required: "" },
-          domProps: { value: _vm.product.name },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Name")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.product.name,
+                  expression: "product.name"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", required: "" },
+              domProps: { value: _vm.product.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.product, "name", $event.target.value)
+                }
               }
-              _vm.$set(_vm.product, "name", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Reference")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.product.reference,
-              expression: "product.reference"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", required: "" },
-          domProps: { value: _vm.product.reference },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Reference")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.product.reference,
+                  expression: "product.reference"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", required: "" },
+              domProps: { value: _vm.product.reference },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.product, "reference", $event.target.value)
+                }
               }
-              _vm.$set(_vm.product, "reference", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Stock")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.product.stock,
-              expression: "product.stock"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", required: "" },
-          domProps: { value: _vm.product.stock },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Stock")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.product.stock,
+                  expression: "product.stock"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", required: "" },
+              domProps: { value: _vm.product.stock },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.product, "stock", $event.target.value)
+                }
               }
-              _vm.$set(_vm.product, "stock", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Details")]),
-        _vm._v(" "),
-        _c("textarea", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.product.details,
-              expression: "product.details"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { rows: "5", type: "text", required: "" },
-          domProps: { value: _vm.product.details },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Details")]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.product.details,
+                  expression: "product.details"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { rows: "5", type: "text", required: "" },
+              domProps: { value: _vm.product.details },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.product, "details", $event.target.value)
+                }
               }
-              _vm.$set(_vm.product, "details", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Description")]),
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Image file")]),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "file" },
+              on: { change: _vm.previewFiles }
+            })
+          ])
+        ]),
         _vm._v(" "),
-        _c("textarea", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.product.description,
-              expression: "product.description"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { rows: "10", type: "text", required: "" },
-          domProps: { value: _vm.product.description },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Description")]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.product.description,
+                  expression: "product.description"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { rows: "7", type: "text", required: "" },
+              domProps: { value: _vm.product.description },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.product, "description", $event.target.value)
+                }
               }
-              _vm.$set(_vm.product, "description", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Price")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.product.price,
-              expression: "product.price"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", required: "" },
-          domProps: { value: _vm.product.price },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Price")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.product.price,
+                  expression: "product.price"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", required: "" },
+              domProps: { value: _vm.product.price },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.product, "price", $event.target.value)
+                }
               }
-              _vm.$set(_vm.product, "price", $event.target.value)
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Shipping cost")]),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.product.shipping_cost,
-              expression: "product.shipping_cost"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: { type: "text", required: "" },
-          domProps: { value: _vm.product.shipping_cost },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", [_vm._v("Shipping cost")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.product.shipping_cost,
+                  expression: "product.shipping_cost"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", required: "" },
+              domProps: { value: _vm.product.shipping_cost },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.product, "shipping_cost", $event.target.value)
+                }
               }
-              _vm.$set(_vm.product, "shipping_cost", $event.target.value)
-            }
-          }
-        })
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("img", {
+              staticClass: "img-responsive imagen-form",
+              attrs: { src: _vm.product.image_path, alt: "" }
+            })
+          ])
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "form-group" }, [
-        _c("label", [_vm._v("Image file")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "file" },
-          on: { change: _vm.previewFiles }
-        })
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "img-responsive imagen-form",
-          attrs: { src: _vm.product.image_path, alt: "" }
-        })
-      ])
+      _vm._m(0)
     ]
   )
 }

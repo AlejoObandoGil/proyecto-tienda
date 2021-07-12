@@ -22,19 +22,21 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <header class="space-inter">
+            @include('partials.navbar')
+            <br>
+            <br>
+            <div class="container container-flex space-between">
+                <figure class="logo"><img src="" alt=""></figure>
+                {{-- <h1>{{ config('app.name') }}</h1> --}}
+                <nav class="custom-wrapper" id="menu">
+
+                </nav>
             </div>
-        </nav>
+        </header>
         <div>
             <!-- Content Header (Page header) -->
-            <section class="content-header">   
+            <section class="content-header">
                 @yield('header')
             </section>
             <!-- /.content-header -->
@@ -46,7 +48,7 @@
 
 
         <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>   
+        <script src="{{ mix('js/app.js') }}" defer></script>
         <!-- jQuery -->
         <script src="/adminlte/plugins/jquery/jquery.min.js"></script>
         <!-- Bootstrap 4 -->
@@ -54,6 +56,6 @@
         <!-- AdminLTE App -->
         <script src="/adminlte/js/adminlte.min.js"></script>
         @stack('scripts')
-    
+
 </body>
 </html>
