@@ -4,7 +4,7 @@
 
     <div>
         <br>
-        <h1 class="m-0">{{ config('app.name')}}
+        <h1 class="">{{ config('app.name')}}
             <small>Admin / New Product</small>
         </h1>
         <nav aria-label="breadcrumb">
@@ -26,7 +26,7 @@
             <blog/>
         </div> --}}
         <div>
-            <product-index :product="{{ $product }}"/>
+            <product-index :product="{{ $product }}" :new_product="{{ $new_product }}"/>
         </div>
     </div>
 

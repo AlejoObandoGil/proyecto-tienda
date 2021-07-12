@@ -10,25 +10,26 @@ class ProductController extends Controller
 {
 	public function index()
 	{
-		$product = Product::get();
+		$product = Product::all();
+        $new_product = new Product();
 
-		return view('admin.product.index', compact('product'));
+		return view('admin.product.index', compact('product', 'new_product'));
 	}
 
     public function create(Request $request)
 	{
-        $name='';
+        // $name='';
 		$product = new Product($request->all());
         if ($request->hasFile('image_path')){
             $name = $request->image_path->getClientOriginalName();
             $product->image_path = $name;
-            $request->file('image_path')->storeAs('img', $name);
+            $request->image_path('image_path')->storeAs('img', $name);
         }
         $product->save();
 
 		return response()->json([
 			'product' => $product,
-			'saved' => true
+			// 'saved' => true
 		]);
 	}
 
@@ -48,7 +49,7 @@ class ProductController extends Controller
 
 		return response()->json([
 			'product' => $Product,
-			'saved' => true,
+			// 'saved' => true,
 		]);
 	}
 

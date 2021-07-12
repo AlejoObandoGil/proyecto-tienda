@@ -44,6 +44,7 @@
 
 <script>
 export default {
+    props: ['new_product'],
 	data(){
 		return{
 			product: {
@@ -56,10 +57,16 @@ export default {
 				shipping_cost: '',
                 image_path: ''
 			},
-            avatar: null
+            avatar: null,
+            url: `/admin/create`
 		}
 	},
-
+	mounted(){
+		if(this.new_product.id != undefined){
+			this.url = `/admin/update/${this.new_product.id}`
+			this.product = this.new_product
+		}
+	},
 	methods:{
         previewFiles(event){
             this.avatar = event.target.files[0]
@@ -69,8 +76,9 @@ export default {
             var data = new FormData();
             data.append('image_path', this.avatar, this.avatar.name)
 
-			await axios.post('admin/create', this.product).then(res => {
-				if(res.data.saved){
+			await axios.post(this.url, this.product).then(res => {
+				if(this.new_product.id === undefined){
+                    this.$parent.all_product.push(res.data.product)
 					this.product = {
 						name: '',
 						reference: '',
@@ -81,7 +89,6 @@ export default {
 						shipping_cost: '',
                         image_path: ''
 					}
-					this.$parent.all_product.push(res.data.product)
 					alert('Save Product')
                     console.log(res.data)
 				}

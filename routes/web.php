@@ -1,25 +1,11 @@
 <?php
 
-use App\Blog;
-use Illuminate\Http\Request;
+// use App\Blog;
+// use Illuminate\Http\Request;
 
 Route::get('test/role/create', 'Admin\RoleController@create');
 Route::get('test/role/assign', 'Admin\RoleController@assign');
 
-Route::post('/file/save', function(Request $request){
-    $blog = new Blog($request->all());
-    // $blog->titulo = $request->titulo;
-    if ($request->hasFile('file')){
-        $name = $request->file->getClientOriginalName();
-        $blog->file = $name;
-
-        $request->file('file')->storeAs('img', $name);
-        // $request->file->move(public_path('images/'), $name);
-    }
-    $blog->save();
-})->name('file.save');
-
-//------------------------------CART-CLIENT--------------------------------
 // Views Cart
 Route::get('/', 'CartController@shop')->name('shop');
 
@@ -31,7 +17,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/remove', 'CartController@remove')->name('cart.remove');
     Route::post('/clear', 'CartController@clear')->name('cart.clear');
     Route::group(['middleware' => ['role:admin']], function () {
-        //----------------------------ADMIN-------------------------------------
         // views Product admin
         Route::get('/admin', 'Admin\ProductController@index')->name('admin.product.index');
         Route::get('admin/edit/{Product}', 'Admin\ProductController@edit')->name('admin.product.edit');
@@ -41,7 +26,6 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('admin/delete/{Product}', 'Admin\ProductController@delete')->name('admin.product.delete');
     });
 });
-//------------------------------AUTHENTICATION-----------------------------
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -49,6 +33,19 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
+
+// Route::post('/file/save', function(Request $request){
+    //     $blog = new Blog($request->all());
+    //     // $blog->titulo = $request->titulo;
+    //     if ($request->hasFile('file')){
+    //         $name = $request->file->getClientOriginalName();
+    //         $blog->file = $name;
+
+    //         $request->file('file')->storeAs('img', $name);
+    //         // $request->file->move(public_path('images/'), $name);
+    //     }
+    //     $blog->save();
+    // })->name('file.save');
 
 
 

@@ -54,10 +54,10 @@
                                 <div class="card" style="margin-bottom: -40px; height: auto;">
                                     <div class="row">
                                         <div class="col-lg-3">
-                                            <img src="/img/{{ $product->file }}"
+                                            <img src="/img/{{ $product->image_path }}"
                                             class="card-img-top mx-auto"
                                             style="height: 200px; width: 200px;display: block;"
-                                            alt="{{ $product->file }}"
+                                            alt="{{ $product->image_path }}"
                                             >
                                         </div>
 
@@ -95,7 +95,7 @@
                 </section>
             </div>
         </div>
-        <div class="pagination">
+        <div class="pagination text-center">
             <ul class="list-unstyled container-flex space-center">
                 <li><a href="#" class="pagination-active">1</a></li>
                 <li><a href="#">2</a></li>
