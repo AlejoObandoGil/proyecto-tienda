@@ -36,7 +36,7 @@
                     <label>Shipping cost</label>
                     <input type="text" class="form-control" v-model="product.shipping_cost" required>
                 </div>
-                <div>
+                <div class="form-group">
                     <img :src="product.image_path" alt="" class="img-responsive imagen-form">
                 </div>
             </div>
@@ -81,7 +81,7 @@ export default {
             var data = new FormData();
             data.append('image_path', this.avatar, this.avatar.name)
 
-			await axios.post(this.url, this.product).then(res => {
+			await axios.post(this.url, this.product, data).then(res => {
 				if(this.new_product.id === undefined){
                     this.$parent.all_product.push(res.data.product)
 					this.product = {
@@ -94,9 +94,11 @@ export default {
 						shipping_cost: '',
                         image_path: ''
 					}
-					alert('Save Product')
-                    console.log(res.data)
 				}
+                else{
+                    alert('Save Product')
+                    console.log(res.data)
+                }
 			})
 		}
 	}

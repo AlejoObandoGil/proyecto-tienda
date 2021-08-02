@@ -35,18 +35,18 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-// Route::post('/file/save', function(Request $request){
-    //     $blog = new Blog($request->all());
-    //     // $blog->titulo = $request->titulo;
-    //     if ($request->hasFile('file')){
-    //         $name = $request->file->getClientOriginalName();
-    //         $blog->file = $name;
+Route::post('/file/save', function(Request $request){
+        $blog = new Blog($request->all());
+        // $blog->titulo = $request->titulo;
+        if ($request->hasFile('file')){
+            $name = $request->file->getClientOriginalName();
+            $blog->file = $name;
 
-    //         $request->file('file')->storeAs('img', $name);
-    //         // $request->file->move(public_path('images/'), $name);
-    //     }
-    //     $blog->save();
-    // })->name('file.save');
+            $request->file('file')->storeAs('img', $name);
+            // $request->file->move(public_path('images/'), $name);
+        }
+        $blog->save();
+    })->name('file.save');
 
 
 
